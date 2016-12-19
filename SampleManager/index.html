@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <title>SampleManager</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assest/css/fixStyle.css">
+  <link rel="stylesheet" href="assest/css/font-awesome-4.5.0/css/font-awesome.min.css">
+  <script src="third/jquery-3.1.0.min.js"></script>
+  <script src="third/jQuery.md5.js"></script>
+  <script src="third/jsonsql-0.2.js"></script>
+  <script src="assest/js/global_datas.js"></script>
+  <script src="assest/js/text_opreates.js"></script>
+  <!--<script src="assest/js/origin.js"></script>-->
+  <script src="assest/js/async_in_order.js"></script>
+  <script src="assest/js/alert_busy.js"></script>
+  <script src="assest/js/image_process.js"></script>
+  <script type="text/javascript">
+    window.onload= function () {
+      $(document).ready(function () {
+//        window.open('assest/html/project.html');
+        $("#index_body").load("assest/html/project.html",function(){
+          $.getScript("assest/js/project.js");
+        });
+      });
+    }
+  </script>
+</head>
+<body id="index_body">
+<!--<div class="menu_container">-->
+<!--</div>-->
+<!--<div class="body_container">-->
+<!--</div>-->
+<!--<div class="footer_container">-->
+  <!--Copyright NERCAR<i class="fa fa-copyright fa-fw"></i>-->
+<!--</div>-->
+</body>
+</html>

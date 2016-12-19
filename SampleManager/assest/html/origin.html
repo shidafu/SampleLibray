@@ -1,0 +1,107 @@
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<title>SampleManager</title>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<link rel="stylesheet" href="../css/fixStyle.css">-->
+    <!--<link rel="stylesheet" href="../css/font-awesome-4.5.0/css/font-awesome.min.css">-->
+    <!--<script src="../../third/jquery-3.1.0.min.js"></script>-->
+    <!--<script src="../../third/jQuery.md5.js"></script>-->
+    <!--<script src="../js/global_datas.js"></script>-->
+    <!--<script src="../js/text_opreates.js"></script>-->
+    <!--<script src="../js/origin.js"></script>-->
+    <!--<script src="../js/async_in_order.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+    <div class="menu_container">
+        <ul class="menu_ul">
+            <li id="menu_open" class="menu_li">
+                <a href="#" class="menu_a" title = "Open"><i class="fa fa-folder-open-o fa-fw"></i></a>
+            </li>
+            <li id="menu_save" class="menu_li">
+                <a href="#" class="menu_a" title = "Save"><i class="fa fa-save fa-fw"></i></a>
+            </li>
+            <li class="menu_li">
+                <div style="height:100%;left:5px;width:8px;">
+                    <div style="height:100%;width:1px;background: #aaaaaa;text-align: center;margin:0 auto;">
+                    </div>
+                </div>
+            </li>
+            <li id="menu_show_hide_nav" class="menu_li">
+                <a href="#" class="menu_a" title = "Image list"><i class="fa fa-list fa-fw"></i></a>
+            </li>
+            <li id="menu_show_hide_detail" class="menu_li">
+                <a href="#" class="menu_a" title = "Sample list"><i class="fa fa-sitemap fa-fw"></i></a>
+            </li>
+            <li class="menu_li">
+                <div style="height:100%;left:5px;width:8px;">
+                    <div style="height:100%;width:1px;background: #aaaaaa;text-align: center;margin:0 auto;">
+                    </div>
+                </div>
+            </li>
+            <li id="menu_out" class="menu_li">
+                <a href="#" class="menu_a" title = "Output"><i class="fa fa-download fa-fw"></i></a>
+            </li>
+            <li id="menu_help" class="menu_li">
+                <a href="#" class="menu_a" title = "Help"><i class="fa fa-question fa-fw"></i></a>
+            </li>
+            <li id="menu_exit" class="menu_li" style="float: right">
+                <a href="#" class="menu_a" title = "Exit"><i class="fa fa-remove fa-fw"></i></a>
+            </li>
+            <li id="menu_max" class="menu_li" style="float: right">
+                <a href="#" class="menu_a" title = "Maximize/Restore"><i class="fa fa-clone fa-fw"></i></a>
+            </li>
+            <li id="menu_min" class="menu_li" style="float: right">
+                <a href="#" class="menu_a" title = "Minimize"><i class="fa fa-minus fa-fw"></i></a>
+            </li>
+        </ul>
+        <input id="menu_path_input" type="file" nwdirectory style="display:none;" />
+        <input id="menu_path_output" type="file" nwdirectory style="display:none;" />
+    </div>
+    <div class="body_container">
+        <div id="body_nav" class="nav_container_111">
+            <div id="body_nav_control">
+                <button id="add_img_button" type="button" class="btn btn-default" title = "Add image" style="height:80%">
+                    Add <i class="fa fa-image fa-fw"></i>
+                </button>
+                <button id="del_img_button" type="button" class="btn btn-default" title = "Remove image" style="height:80%">
+                    Del <i class="fa fa-trash fa-fw"></i>
+                </button>
+                <input id="read_img_input" type="file" accept="image/*" multiple="multiple" style="display:none;"/>
+            </div>
+            <select id="body_nav_img_list" name="list" multiple="false" >
+            </select>
+        </div>
+        <div id="body_section" class="section_container_111">
+            <div id="body_section_control">
+                &nbsp Scale
+                <select id="img_ratio">
+                    <option value=0.25>1/4</option>
+                    <option value=0.5>1/2</option>
+                    <option value=1.0 selected="selected">1:1</option>
+                    <option value=2.0>2:1</option>
+                    <option value=4.0>4:1</option>
+                </select>
+                width<input id="img_width" type="text" readOnly="true" value="*" style="width: 45px">
+                height<input id="img_height" type="text" readOnly="true" value="*" style="width: 45px">
+                x<input id="img_x" class="smp_tools" type="number" min="2" max="2048" value="0" style="width: 50px">
+                y<input id="img_y" class="smp_tools" type="number" min="2" max="2048" value="0" style="width: 50px">
+            </div>
+            <div id="body_section_view" class="myNoBorder">
+            </div>
+        </div>
+        <div id="body_detail" class="detail_container_111">
+            <div id="body_detail_control">
+                &nbsp w<input id="smp_w" class="smp_tools" type="number" min="2" max="2048" value="32" style="width: 50px">
+                h<input id="smp_h" class="smp_tools" type="number" min="2" max="2048" value="32" style="width: 50px">
+            </div>
+            <select id="body_detail_smp_list" class="smp_tools"  name="list" multiple="false">
+            </select>
+        </div>
+    </div>
+    <div class="footer_container">
+        Copyright NERCAR<i class="fa fa-copyright fa-fw"></i>
+    </div>
+<!--</body>-->
+<!--</html>-->

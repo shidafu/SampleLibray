@@ -1,0 +1,40 @@
+{
+  "name": "SampleManager",
+  "main": "index.html",
+  "description": "Sample manage tool.",
+  "version": "0.1.0",
+  "nodejs": true,
+  "node-main": "index.js",
+
+  "window": {
+    "title": "SampleManager",
+    "icon": "logo",
+    "position": "center",
+    "toolbar": true,
+    "width": 1024,
+    "height": 768,
+    "resizable": true,
+    "show_in_taskbar": true,
+    "frame": false
+  },
+
+  "maintainers":[ {
+    "name": "WL",
+    "email": "towanglei@163.com"
+  }]
+
+//  "0.0.0",
+//  "private": true,
+//  "scripts": {
+//    "start": "node ./bin/www"
+//  },
+//  "dependencies": {
+//    "body-parser": "~1.15.1",
+//    "cookie-parser": "~1.4.3",
+//    "debug": "~2.2.0",
+//    "ejs": "~2.4.1",
+//    "express": "~4.13.4",
+//    "morgan": "~1.7.0",
+//    "serve-favicon": "~2.3.0"
+//  }
+}
