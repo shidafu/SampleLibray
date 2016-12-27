@@ -15,7 +15,7 @@
     "height": 768,
     "resizable": true,
     "show_in_taskbar": true,
-    "frame": false
+    "frame": true
   },
 
   "maintainers":[ {

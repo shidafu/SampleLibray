@@ -7,11 +7,15 @@ $(document).ready(function () {
     {
         alert(">FileReader==undefined(>_<)");
     }
-    $("#project_path_input").click();
+    $("#project_path_input").click(function () {
+        console.log(project_path_inputer.val());
+
+    });
     //render_project();
 
     var project_path_inputer=$("#project_path_input");
     $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
+    /*
     $("#project_path_input").change(function() {
         if(this.value=="\\" ||this.value=="/"){
             alert("err");
@@ -28,11 +32,11 @@ $(document).ready(function () {
             project_ok=true;
             render_project();
         },function() {
-            project_ok=falses;
+            project_ok=false;
             // alert("Function>$('#project_path_input').change>global_path_load> onErr(>_<)");
         });
     });
-
+    */
     $("#project_path_text").click(function() {
         // alert("#project_path_text");
         $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
