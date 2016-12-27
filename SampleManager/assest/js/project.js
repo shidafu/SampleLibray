@@ -17,6 +17,7 @@ $(document).ready(function () {
     $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
     /*
     $("#project_path_input").change(function() {
+        this.value=this.value.replace('\\','/');
         if(this.value=="\\" ||this.value=="/"){
             alert("err");
             clear_project();
