@@ -15,9 +15,6 @@ $(document).ready(function () {
 
     $("#project_path_input").change(function() {
 
-        console.log(this.value);
-
-        //this.value=this.value.replace('\\','/');
         if(this.value=="\\" ||this.value=="/"){
             alert("err");
             clear_project();
