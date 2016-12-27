@@ -31,7 +31,7 @@ $(document).ready(function(){
             clear_project();
             return;
         }
-        global_path = delLastDashInPath(this.value)+"\\";
+        global_path = delLastDashInPath(this.value)+"/";
         $("#menu_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
         $("#menu_path_input").attr("value",global_path);
         global_path_load(global_path, function() {
@@ -158,7 +158,7 @@ $(document).ready(function(){
             clear_project();
             return;
         }
-        out_path = delLastDashInPath(this.value)+"\\";
+        out_path = delLastDashInPath(this.value)+"/";
         $("#menu_path_output").attr("nwworkingdir",delLastDashInPath(out_path));
         $("#menu_path_output").attr("value",out_path);
 
@@ -516,6 +516,7 @@ $(document).ready(function(){
     var smp_c_ctrl_menu = new gui.Menu();
     smp_c_ctrl_menu.append(new gui.MenuItem({ label: 'Delete',click: function(){
         if(confirm("Confirm delete sample(?_?)")){
+            alert(smp_c_ctrl.value);
             if(smp_c_ctrl.value=="all"){
                 current_class_index=-1;
                 for(var i in current_samples_showed){

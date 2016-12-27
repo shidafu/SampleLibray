@@ -18,7 +18,7 @@ $(document).ready(function () {
             clear_project();
             return;
         }
-        global_path = delLastDashInPath(this.value)+"\\";
+        global_path = delLastDashInPath(this.value)+"/";
         $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
         $("#project_path_text").attr("value",global_path);
         global_path_load(global_path, function() {

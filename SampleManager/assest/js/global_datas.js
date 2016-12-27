@@ -280,10 +280,12 @@ var addSample = function(smp_index,w,h,x,y,class_index) {
 var delSample = function(index) {
     if(index<0 ||index>global_origin.images.length) return false;
     global_origin.samples.remove();
+    alert(JSON.stringify(global_origin.samples));
 };
 
 var sapratePath = function(fullPath){
     if(fullPath!=''){
+        fullPath=fullPath.replace('\\','/');
         var path="";
         var name="";
         var ext="";
@@ -332,6 +334,7 @@ var writeSampleFile = function(sampleIndex,onWrite,onErr){
     var sampleIndex=parseInt(sampleIndex);
     var fs = require('fs');
     var image_filename=global_path+global_origin.images[global_origin.samples[sampleIndex].image-1].name;
+    image_filename=image_filename.replace('\\','/');
     if(!fs.existsSync(image_filename)){
         alert(">writeSampleFile> image:"+image_filename+" do not exist(?_?)");
         onErr();
@@ -341,9 +344,11 @@ var writeSampleFile = function(sampleIndex,onWrite,onErr){
     if(out_path.lastIndexOf('/')== out_path.length-1 || out_path.lastIndexOf('\\')== out_path.length-1){
         dstFullPath=out_path.substring(0,out_path.length-1)+'\\';
     }
+    out_path=out_path.replace('\\','/');
+    dstFullPath=dstFullPath.replace('\\','/');
     var sampleIndex_1=sampleIndex+1;
     var sample_filename=dstFullPath+global_origin.classes[global_origin.samples[sampleIndex].class-1]+
-        '\\'+ sampleIndex_1+'_in_'+global_origin.images[global_origin.samples[sampleIndex].image-1].name;
+        '/'+ sampleIndex_1+'_in_'+global_origin.images[global_origin.samples[sampleIndex].image-1].name;
     // alert(sample_filename);
     if(fs.existsSync(sample_filename)) {
         onWrite();
@@ -364,9 +369,9 @@ var writeSampleFile = function(sampleIndex,onWrite,onErr){
 };
 var writeSampleFiles = function(fullPath,onFinish){
     if(fullPath.lastIndexOf('/')== fullPath.length-1 || fullPath.lastIndexOf('\\')== fullPath.length-1){
-        out_path=fullPath.substring(0,fullPath.length-1)+'\\';
+        out_path=fullPath.substring(0,fullPath.length-1)+'/';
     }
-    out_path=out_path.replace('/','\\');
+    out_path=out_path.replace('\\','/');
     if(global_origin.samples.length==0 || out_path==''){
         onFinish();
         return 0;
