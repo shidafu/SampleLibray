@@ -7,23 +7,24 @@ $(document).ready(function () {
     {
         alert(">FileReader==undefined(>_<)");
     }
-    $("#project_path_input").click(function () {
-        console.log(project_path_inputer.val());
 
-    });
     //render_project();
 
     var project_path_inputer=$("#project_path_input");
     $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
-    /*
+
     $("#project_path_input").change(function() {
-        this.value=this.value.replace('\\','/');
+
+        console.log(this.value);
+
+        //this.value=this.value.replace('\\','/');
         if(this.value=="\\" ||this.value=="/"){
             alert("err");
             clear_project();
             return;
         }
         global_path = delLastDashInPath(this.value)+"/";
+        console.log("global_path:",global_path);
         $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
         $("#project_path_text").attr("value",global_path);
         global_path_load(global_path, function() {
@@ -36,8 +37,9 @@ $(document).ready(function () {
             project_ok=false;
             // alert("Function>$('#project_path_input').change>global_path_load> onErr(>_<)");
         });
+
     });
-    */
+
     $("#project_path_text").click(function() {
         // alert("#project_path_text");
         $("#project_path_input").attr("nwworkingdir",delLastDashInPath(global_path));
