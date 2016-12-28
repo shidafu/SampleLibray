@@ -11,6 +11,6 @@ function delLastDashInPath(fullPath){
     if(fullPath.lastIndexOf('/')== fullPath.length-1 || fullPath.lastIndexOf('\\')== fullPath.length-1){
         fullPath2=fullPath.substring(0,fullPath.length-1);
     }
-    fullPath2=fullPath2.replaceAll('\\','/');
+    fullPath2=fullPath2.replace(/\\/,'/');
     return fullPath2;
 }

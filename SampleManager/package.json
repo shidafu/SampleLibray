@@ -4,7 +4,6 @@
   "description": "Sample manage tool.",
   "version": "0.1.0",
   "nodejs": true,
-  "node-main": "index.js",
 
   "window": {
     "title": "SampleManager",
